@@ -1,0 +1,312 @@
+
+
+/* styles.css
+*  Project wide header style
+*/
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header img {
+    height: 60px;
+    width: auto;
+}
+
+.header nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li {
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* General Resets and Body Styles */
+main {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    : center;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    margin: 0;
+    padding: 0 20px; /* Add 20px padding on left and right */
+}
+
+/* Header Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 1s ease; /* Smooth animation */
+}
+
+.hero-image {
+    max-width: 60%;
+    height: auto;
+    transform: rotate(90deg);
+    transition: all 1s ease; /* Smooth animation */
+}
+
+.hero-text {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all 1s ease;
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+.terminal-panel {
+    flex: 0;
+    background-color: #000;
+    color: #0f0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Active State */
+.hero.active .hero-container {
+    flex: 0.5; /* Shrinks the hero container */
+}
+
+.hero.active .terminal-panel {
+    flex: 0.5; /* Expands the terminal panel */
+    display: flex; /* Makes the terminal visible */
+}
+.cta-button {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff8c00;
+    transform: scale(1.1);
+}
+
+.investors-section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.investors-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.investment-details {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none; /* Hidden by default */
+}
+
+
+/* Investment Table Section */
+.investment-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.investment-table table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px; /* Keep the table from expanding too far */
+}
+
+.investment-table th,
+.investment-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Signup Form Styling */
+.signup-form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.signup-form h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.signup-form input {
+    padding: 10px;
+    width: 250px;
+    margin: 10px 0;
+}
+
+.signup-form .cta-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.signup-form .cta-button:hover {
+    background-color: #0056b3;
+}
+
+#emailError {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 600px) {
+    footer ul {
+        flex-direction: column;
+    }
+}
+
+/* Apply animation to the GIF */
+#loadingGif {
+    animation: none; /* Default: no animation */
+}
+
+/* Show the overlay */
+.loading-overlay {
+    display: flex;
+}
+
+
+/* Project wide Footer Style */
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer ul li {
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-small-text {
+    font-size: 0.8em; /* This will make the text smaller */
+    /* Optional: Add some spacing if needed */
+}
