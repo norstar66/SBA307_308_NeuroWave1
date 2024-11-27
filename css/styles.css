@@ -1,312 +1,168 @@
+/* General Styles */
 
+/* Set the global background color for the entire site */
+body {
+    background-color: dimgrey; /* Site-wide background color */
+    color: #fff; /* Default text color for readability */
+    font-family: Arial, sans-serif; /* Set default font for the site */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Padding and border included total width and height */
+}
 
-/* styles.css
-*  Project wide header style
-*/
-
+/* Header Styles */
+/* Acts on all pages */
+/* Style the header section including navigation */
 .header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #222; /* Dark background for the header */
+    padding: 20px 0; /* Padding for top and bottom of header */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items in the header */
+    justify-content: space-between; /* Space out items to edges */
 }
 
-.header img {
-    height: 60px;
-    width: auto;
-}
-
+/* Navigation Styling */
+/* Acts on all pages */
+/* Style the unordered list containing navigation links */
 .header nav ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* Remove bullet points from list items */
+    padding: 0; /* Remove padding from list */
+    display: flex; /* Flex display for horizontal navigation */
+    gap: 20px; /* Add space between navigation links */
 }
 
+/* Individual Navigation Links */
+/* Acts on all pages */
 .header nav ul li {
-    margin: 0 15px;
+    display: inline-block; /* Display list items inline for horizontal navigation */
 }
 
+/* Anchor Tag Styles for Navigation */
+/* Acts on all pages */
+/* Style for navigation links */
 .header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    color: #fff; /* White text color for contrast */
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 16px; /* Add padding around links */
+    transition: background-color 0.3s ease; /* Smooth transition effect for background changes */
 }
 
-/* General Resets and Body Styles */
-main {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    : center;
-    width: auto;
-    height: auto;
-    background-size: cover;
-    margin: 0;
-    padding: 0 20px; /* Add 20px padding on left and right */
+/* Anchor Hover State */
+/* Acts on all pages */
+/* Change background color on hover */
+.header nav ul li a:hover {
+    background-color: #444; /* Lighter background on hover */
+    border-radius: 4px; /* Add slight rounding for a button effect */
 }
 
-/* Header Navigation Bar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #333;
+/* Hero Section Styles */
+/* Acts on index.html */
+/* Styles for the hero image section */
+.landing-hero {
+    text-align: center; /* Center align text in hero section */
+    padding: 50px 20px; /* Top and bottom padding for spacing */
+    color: #00bcd4; /* Highlighted color for main text */
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: all 1s ease; /* Smooth animation */
-}
-
-.hero-image {
-    max-width: 60%;
-    height: auto;
-    transform: rotate(90deg);
-    transition: all 1s ease; /* Smooth animation */
-}
-
-.hero-text {
-    font-size: 2rem;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    transition: all 1s ease;
-}
-
+/* CTA Button Styling */
+/* Acts on index.html */
+/* Styles for the call-to-action button */
 .cta-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    background-color: #00bcd4; /* Primary button color */
+    color: #fff; /* Text color for contrast */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 8px; /* Rounded corners for button */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer to indicate clickable button */
+    transition: transform 0.2s ease; /* Add smooth scaling effect */
 }
 
+/* Button Hover Effect */
+/* Acts on index.html */
+/* Make the button grow slightly on hover for visual engagement */
 .cta-button:hover {
-    background-color: #555;
+    transform: scale(1.1); /* Slightly increase button size */
 }
 
-.terminal-panel {
-    flex: 0;
-    background-color: #000;
-    color: #0f0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-family: monospace;
-    padding: 20px;
-    overflow: hidden;
+/* Problem Statement Section Styles */
+/* Acts on index.html */
+/* Styles for the problem statement section */
+.problem-statement {
+    padding: 40px; /* Spacing around the problem statement */
+    background-color: #333; /* Dark background for contrast */
+    color: #f4f4f4; /* Light text color for readability */
+    border-radius: 10px; /* Rounded edges for a softer appearance */
+    margin: 20px auto; /* Center the section with margin */
+    max-width: 800px; /* Constrain width for readability */
 }
 
-/* Active State */
-.hero.active .hero-container {
-    flex: 0.5; /* Shrinks the hero container */
+/* How It Works Section Styles */
+/* Acts on index.html */
+/* Styles for the "How It Works" section */
+.how-it-works {
+    padding: 40px; /* Spacing for the section */
+    background-color: #444; /* Background color to differentiate section */
+    color: #fff; /* White text color for readability */
 }
 
-.hero.active .terminal-panel {
-    flex: 0.5; /* Expands the terminal panel */
-    display: flex; /* Makes the terminal visible */
-}
-.cta-button {
-    background-color: #00bcd4;
-    color: #fff;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+/* Bullet List Styles in How It Works Section */
+/* Acts on index.html */
+/* Styling for list items in "How It Works" section */
+.how-it-works ul {
+    list-style-type: disc; /* Use disc bullet points for list */
+    padding-left: 20px; /* Indent the list for clarity */
 }
 
-.cta-button:hover {
-    background-color: #ff8c00;
-    transform: scale(1.1);
+/* Testimonials Section Styles */
+/* Acts on index.html */
+/* Styles for the testimonials section */
+.testimonials {
+    padding: 40px; /* Padding for spacing */
+    background-color: #7a229a; /* Background color for emphasis */
+    color: #fff; /* White text color */
+    margin: 20px; /* Margin to separate section visually */
+    border-left: 5px solid #2c2a2a; /* Accent border to draw attention */
 }
 
-.investors-section {
-    text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.investors-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.dropdown select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.investment-details {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    display: none; /* Hidden by default */
-}
-
-
-/* Investment Table Section */
-.investment-table {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.investment-table table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 800px; /* Keep the table from expanding too far */
-}
-
-.investment-table th,
-.investment-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-/* Signup Form Styling */
-.signup-form {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #ccc;
-}
-
-.signup-form h2 {
-    margin-top: 0;
-    font-size: 1.5em;
-}
-
-.signup-form input {
-    padding: 10px;
-    width: 250px;
-    margin: 10px 0;
-}
-
-.signup-form .cta-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.signup-form .cta-button:hover {
-    background-color: #0056b3;
-}
-
-#emailError {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
-    display: none;
-}
-
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-
-@media screen and (max-width: 600px) {
-    footer ul {
-        flex-direction: column;
-    }
-}
-
-/* Apply animation to the GIF */
-#loadingGif {
-    animation: none; /* Default: no animation */
-}
-
-/* Show the overlay */
-.loading-overlay {
-    display: flex;
-}
-
-
-/* Project wide Footer Style */
+/* Footer Section Styles */
+/* Acts on all pages */
+/* Styles for the footer section */
 .footer {
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
+    background-color: #222; /* Dark background for footer */
+    color: #bbb; /* Light gray text color for contrast */
+    padding: 20px; /* Padding around footer content */
+    text-align: center; /* Center align footer text */
 }
 
+/* Footer Navigation Links */
+/* Acts on all pages */
+/* Footer links styling */
 .footer ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.footer ul li {
-    margin: 0 10px;
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flex for horizontal layout */
+    justify-content: center; /* Center items in footer */
+    gap: 15px; /* Space between footer links */
+    margin-bottom: 10px; /* Space below navigation links */
 }
 
 .footer ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #bbb; /* Light gray text for footer links */
+    text-decoration: none; /* Remove underline for links */
+    transition: color 0.3s ease; /* Smooth transition for link hover color */
 }
+
+/* Footer Navigation Link Hover Effect */
+/* Acts on all pages */
+/* Darken link color on hover for feedback */
+.footer ul li a:hover {
+    color: #fff; /* White color for hover effect */
+}
+
+/* Small Text Styling in Footer */
+/* Acts on all pages */
+/* Style for the small copyright notice text */
 .footer-small-text {
-    font-size: 0.8em; /* This will make the text smaller */
-    /* Optional: Add some spacing if needed */
+    font-size: 0.8em; /* Small font for less emphasis */
+    color: #888; /* Lighter gray color for de-emphasis */
 }
